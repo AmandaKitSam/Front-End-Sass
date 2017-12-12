@@ -1,4 +1,4 @@
-# Front-End Project: Advanced CSS & Sass
+# Front-End Project: Advanced CSS3 & Sass
 
 ## By Amanda Sam
 
