@@ -12,6 +12,8 @@
 
 ### Overview:
 
+- SAM'S PROPERTIES website
+
 #### Design a website for ( company to promote the business )
 
 - Section 0: Navigation and Header

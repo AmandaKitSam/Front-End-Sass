@@ -8,7 +8,7 @@
   Stormy: #494E6B
   Cloud: #98878F
   Evening: #192231
-  Sunset: #985E6D
+  Sunset(dark pink): #985E6D
   Sunshine: #FBA100
   Aqua: #6BBAA7
 */
@@ -59,19 +59,21 @@ body {
 
 .text-box {
   position: absolute;
-  top: 45%; /* position in relation to the parent element */
+  top: 47%; /* position in relation to the parent element */
   left: 50%; /* position in relation to the parent element */
   transform: translate(-50%, -60%); /* transform it self */
+  text-align: center;
 }
 
 .heading-primary {
   text-transform: uppercase;
+  margin-bottom: 55px;
 }
 
 .heading-primary-main {
   display: block;
   font-size: 60px;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 31px;
   text-align: center;
 }
@@ -84,6 +86,21 @@ body {
   text-align: center;
 }
 
+
+/*---------------------------------- BUTTONS ----------------------------------*/
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 20px 45px;
+  border-radius: 50px;
+  display: inline-block;
+}
+
+.btn-header {
+  background-color: #FBA100;
+  color: #ffffff;
+}
 
 
 
