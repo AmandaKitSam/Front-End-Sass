@@ -1,15 +1,37 @@
 /*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
+  --- COLORS ---
+  Light green: #7ed56f
+  Medium green: #55c57a
+  Dark green: #28b485
 */
 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* To change box model - borders & padding are no longer added to the total of the box */
+}
 
 body {
   /*font-family: 'Oswald', sans-serif;*/
   /*font-family: 'Ropa Sans', sans-serif;*/
   font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777777;
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(126, 213, 111, 0.7),
+    rgba(40, 180, 133, 0.65) ), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+
+  /*clip-path: polygon(x y, x y, x y, x y);*/
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
 }
