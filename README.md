@@ -24,3 +24,7 @@
 
 Please visit the website:<br/>
 https://amandakitsam.github.io/Front-End-Sass/
+
+
+
+Color For Reference: https://www.canva.com/learn/website-color-schemes/
