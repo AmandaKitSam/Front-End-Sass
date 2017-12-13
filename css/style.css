@@ -3,6 +3,14 @@
   Light green: #7ed56f
   Medium green: #55c57a
   Dark green: #28b485
+
+  Lavender: #6C648B (OR Header #756b9d)
+  Stormy: #494E6B
+  Cloud: #98878F
+  Evening: #192231
+  Sunset: #985E6D
+  Sunshine: #FBA100
+  Aqua: #6BBAA7
 */
 
 
@@ -20,18 +28,18 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
-  color: #777777;
+  color: #ffffff;
 }
 
 .header {
   height: 95vh;
   background-image: linear-gradient(
     to right bottom,
-    rgba(126, 213, 111, 0.7),
-    rgba(40, 180, 133, 0.65) ), url(../img/hero.jpg);
+    rgba(117, 107, 157, 0.8),
+    rgba(73, 78, 107, 0.8) ), url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
 
-  /*clip-path: polygon(x y, x y, x y, x y);*/
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+  /*clip-path: polygon(x y, x y, x y, x y); can use % or vh*/
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
 }
