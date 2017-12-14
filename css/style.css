@@ -95,6 +95,21 @@ body {
   padding: 20px 45px;
   border-radius: 50px;
   display: inline-block;
+  -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  /* translateY: negative value to go up; positive to go down */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
 
 .btn-header {
