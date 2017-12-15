@@ -92,11 +92,12 @@ body {
 .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 20px 45px;
+  padding: 18px 45px;
   border-radius: 50px;
   display: inline-block;
   -webkit-transition: all 0.2s ease-in-out;
           transition: all 0.2s ease-in-out;
+  position: relative; /* Reference of .btn::after */
 }
 
 .btn:hover {
@@ -117,12 +118,31 @@ body {
   color: #ffffff;
 }
 
+/* (pseudo-element) treated like a child of the button */
 .btn::after {
   content: "";
   display: inline-block;
   height: 100%;
   width: 100%;
+  border-radius: 50px;
+  position: absolute; /* position element + need reference of parent */
+  top: 0;
+  left: 0;
+  z-index: -1; /* behind the button */
+  -webkit-transition: all 0.4s ease-in-out;
+          transition: all 0.4s ease-in-out;
 }
+
+.btn-header::after {
+  background-color: rgba(255, 178, 41, 0.9);
+}
+
+.btn:hover::after {
+  transform: scaleX(1.2) scaleY(1.4);
+  /* transform: scale(1.2); */
+  opacity: 0;
+}
+
 
 
 
