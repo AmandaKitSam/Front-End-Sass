@@ -76,6 +76,9 @@ body {
   font-weight: 700;
   letter-spacing: 31px;
   text-align: center;
+
+  animation-name: moveInLeft;
+  animation-duration: 3s;
 }
 
 .heading-primary-sub {
@@ -84,6 +87,23 @@ body {
   font-weight: 400;
   letter-spacing: 14px;
   text-align: center;
+}
+
+@keyframes moveInLeft {
+  /* Starts from 0%, Ends in 100% */
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+    /*  translateX() - left & right;
+        translateY() - from up & down */
+  }
+  80% {
+    /* middle */
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
 
 
@@ -118,7 +138,7 @@ body {
   color: #ffffff;
 }
 
-/* (pseudo-element) treated like a child of the button */
+/* (pseudo-element)::after - treated like a child of the button */
 .btn::after {
   content: "";
   display: inline-block;
