@@ -14,11 +14,11 @@
 
 - SAM'S PROPERTIES website
 
-#### Design a website for ( company to promote the business )
+#### Design a website for a real estate company to promote their business and properties
 
-- Section 0: Navigation and Header
+- Section 0: Header
 
-- Section 1: Features
+- Section 1: Navigation
 
 - Section ?: Footer
 
