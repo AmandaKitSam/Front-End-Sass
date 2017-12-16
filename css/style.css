@@ -68,6 +68,9 @@ body {
 .heading-primary {
   text-transform: uppercase;
   margin-bottom: 55px;
+
+  backface-visibility: hidden;
+  /* Make sure elements dont shake at the end of animations */
 }
 
 .heading-primary-main {
@@ -79,9 +82,10 @@ body {
 
   animation-name: moveInLeft;
   animation-duration: 2s;
+  animation-timing-function: cubic-bezier(1, 0.7, 0.5, 0.5);
   /* animation-delay: 2s; */
   /* animation-iteration-count: 3; (three times)*/
-  animation-timing-function: cubic-bezier(1, 0.7, 0.5, 0.5);
+  /* animation: moveInLeft 2s ease-out; (or just write 3 lines in 1)*/
 }
 
 .heading-primary-sub {
@@ -90,6 +94,9 @@ body {
   font-weight: 400;
   letter-spacing: 14px;
   text-align: center;
+
+  animation-name: moveInRight;
+  animation-duration: 2s;
 }
 
 @keyframes moveInLeft {
@@ -99,7 +106,11 @@ body {
     transform: translateX(-100px);
     /*  translateX() - left & right;
         translateY() - from up & down */
+    /* transform: rotate(180deg); */
   }
+  /* 60% {
+    transform: rotate(90deg); (play with rotate)
+  } */
   80% {
     transform: translateX(10px);
   }
@@ -108,6 +119,21 @@ body {
     transform: translate(0);
   }
 }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
 
 
 /*---------------------------------- BUTTONS ----------------------------------*/
