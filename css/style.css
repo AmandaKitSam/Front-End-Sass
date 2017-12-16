@@ -78,7 +78,10 @@ body {
   text-align: center;
 
   animation-name: moveInLeft;
-  animation-duration: 3s;
+  animation-duration: 2s;
+  /* animation-delay: 2s; */
+  /* animation-iteration-count: 3; (three times)*/
+  animation-timing-function: cubic-bezier(1, 0.7, 0.5, 0.5);
 }
 
 .heading-primary-sub {
@@ -98,7 +101,7 @@ body {
         translateY() - from up & down */
   }
   80% {
-    /* middle */
+    transform: translateX(10px);
   }
   100% {
     opacity: 1;
