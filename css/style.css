@@ -174,14 +174,14 @@ body {
 .btn:hover {
   transform: translateY(-3px);
   /* translateY: negative value to go up; positive to go down */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.5);
   -webkit-transition: all 0.2s ease-in-out;
           transition: all 0.2s ease-in-out;
 }
 
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .btn-header {
