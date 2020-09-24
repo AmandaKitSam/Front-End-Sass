@@ -26,6 +26,11 @@
 
 ```bash
 npm install node-sass --save-dev
+npm install live-server -g
+
+npm run compile:sass
+
+live-server
 ```
 
 ---

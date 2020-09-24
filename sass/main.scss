@@ -12,19 +12,27 @@
   Sunset(dark pink): #985E6D
   Aqua: #6BBAA7
 */
+
+$color-lavender: #6c648b;
+$color-stormy: #494e6b;
+$color-sunshine: #fba100;
+$color-white: #ffffff;
+
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
 
 html {
   /* font-size: 10px; */
   font-size: 62.5%;
   /* 10px = 1rem */
   /* default is 16px = 100% (if users don't change it) */
-  /* 10 / 16 = .625 */ }
+  /* 10 / 16 = .625 */
+}
 
 body {
   /*font-family: 'Oswald', sans-serif;*/
@@ -33,50 +41,61 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
-  color: #ffffff;
+  color: $color-white;
   box-sizing: border-box;
-  /* To change box model - borders & padding are no longer added to the total of the box */ }
+  /* To change box model - borders & padding are no longer added to the total of the box */
+}
 
 /*------------------------------ HEADER section ------------------------------*/
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(108, 100, 139, 0.8), rgba(73, 78, 107, 0.8)), url(../img/hero.jpg);
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-lavender, 0.8),
+      rgba($color-stormy, 0.8)
+    ),
+    url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
+
   /*clip-path: polygon(x y, x y, x y, x y); can use % or vh*/
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%); }
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
+}
 
 .logo-box {
   position: absolute;
   top: 4rem;
-  left: 4rem; }
+  left: 4rem;
+}
 
 .logo {
   height: 3.5rem;
   -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out; }
+  transition: all 0.2s ease-in-out;
+}
 
 .logo:hover {
   transform: scale(1.2);
   -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out; }
+  transition: all 0.2s ease-in-out;
+}
 
 .text-box {
   position: absolute;
-  top: 47%;
-  /* position in relation to the parent element */
-  left: 50%;
-  /* position in relation to the parent element */
-  transform: translate(-50%, -60%);
-  /* transform it self */
-  text-align: center; }
+  top: 47%; /* position in relation to the parent element */
+  left: 50%; /* position in relation to the parent element */
+  transform: translate(-50%, -60%); /* transform it self */
+  text-align: center;
+}
 
 .heading-primary {
   text-transform: uppercase;
   margin-bottom: 5.5rem;
+
   backface-visibility: hidden;
-  /* Make sure elements dont shake at the end of animations */ }
+  /* Make sure elements dont shake at the end of animations */
+}
 
 .heading-primary-main {
   display: block;
@@ -84,12 +103,14 @@ body {
   font-weight: 700;
   letter-spacing: 3rem;
   text-align: center;
+
   animation-name: moveInLeft;
   animation-duration: 2s;
   animation-timing-function: cubic-bezier(1, 0.7, 0.5, 0.5);
   /* animation-delay: 2s; */
   /* animation-iteration-count: 3; (three times)*/
-  /* animation: moveInLeft 2s ease-out; (or just write 3 lines in 1)*/ }
+  /* animation: moveInLeft 2s ease-out; (or just write 3 lines in 1)*/
+}
 
 .heading-primary-sub {
   display: block;
@@ -97,8 +118,10 @@ body {
   font-weight: 400;
   letter-spacing: 1.4rem;
   text-align: center;
+
   animation-name: moveInRight;
-  animation-duration: 2s; }
+  animation-duration: 2s;
+}
 
 @keyframes moveInLeft {
   /* Starts from 0%, Ends in 100% */
@@ -107,35 +130,47 @@ body {
     transform: translateX(-10rem);
     /*  translateX() - left & right;
         translateY() - from up & down */
-    /* transform: rotate(180deg); */ }
+    /* transform: rotate(180deg); */
+  }
   /* 60% {
     transform: rotate(90deg); play with rotate
   } */
   80% {
-    transform: translateX(1rem); }
+    transform: translateX(1rem);
+  }
   100% {
     opacity: 1;
-    transform: translate(0); } }
+    transform: translate(0);
+  }
+}
 
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(10rem); }
+    transform: translateX(10rem);
+  }
   80% {
-    transform: translateX(-1rem); }
+    transform: translateX(-1rem);
+  }
   100% {
     opacity: 1;
-    transform: translate(0); } }
+    transform: translate(0);
+  }
+}
 
 @keyframes moveInUp {
   0% {
     opacity: 0;
-    transform: translateY(10rem); }
+    transform: translateY(10rem);
+  }
   80% {
-    transform: translateY(-1rem); }
+    transform: translateY(-1rem);
+  }
   100% {
     opacity: 1;
-    transform: translate(0); } }
+    transform: translate(0);
+  }
+}
 
 /*---------------------------------- BUTTONS ----------------------------------*/
 .btn:link,
@@ -147,24 +182,27 @@ body {
   display: inline-block;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  position: relative;
-  /* Reference of .btn::after */
-  font-size: 1.6rem; }
+  position: relative; /* Reference of .btn::after */
+  font-size: 1.6rem;
+}
 
 .btn:hover {
   transform: translateY(-3px);
   /* translateY: negative value to go up; positive to go down */
   box-shadow: 0 1rem 0.5rem rgba(0, 0, 0, 0.5);
   -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out; }
+  transition: all 0.2s ease-in-out;
+}
 
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.5); }
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
+}
 
 .btn-header {
-  background-color: #fba100;
-  color: #ffffff; }
+  background-color: $color-sunshine;
+  color: $color-white;
+}
 
 /* (pseudo-element)::after - treated like a child of the button */
 .btn::after {
@@ -173,21 +211,23 @@ body {
   height: 100%;
   width: 100%;
   border-radius: 5rem;
-  position: absolute;
-  /* position element + need reference of parent */
+  position: absolute; /* position element + need reference of parent */
   top: 0;
   left: 0;
-  z-index: -1;
-  /* behind the button */
+  z-index: -1; /* behind the button */
   -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out; }
+  transition: all 0.4s ease-in-out;
+}
 
 .btn-header::after {
-  background-color: rgba(251, 161, 0, 0.9); }
+  background-color: rgba($color-sunshine, 0.9);
+}
 
 .btn:hover::after {
   transform: scaleX(1.2) scaleY(1.4);
-  opacity: 0; }
+  //   transform: scale(1.2);
+  opacity: 0;
+}
 
 .btn-AKS-animated {
   animation-name: moveInUp;
@@ -195,6 +235,7 @@ body {
   animation-timing-function: ease-in-out;
   animation-delay: 2s;
   animation-fill-mode: backwards;
-  /* Apply keyframes 0% styles to the element before the animation starts */ }
+  /* Apply keyframes 0% styles to the element before the animation starts */
+}
 
 /*------------------------------ next section ------------------------------*/
